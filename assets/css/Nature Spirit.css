@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'Nature Spirit';
+	src: url(../../assets/fonts/NatureSpiritRegular.woff2) format('woff2'),
+	url(../../assets/fonts/NatureSpiritRegular.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

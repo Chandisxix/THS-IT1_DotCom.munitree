@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'Nature Spirit Rough';
+	src: url(../../assets/fonts/NatureSpiritRough.woff2) format('woff2'),
+	url(../../assets/fonts/NatureSpiritRough.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
