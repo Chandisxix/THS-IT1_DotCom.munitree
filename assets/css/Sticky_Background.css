@@ -25,12 +25,13 @@ body, html {
 }
 
 .scroller {
-  background-image: url(../../assets/img/Village.jpg);
+  /*background-image: url(../../assets/img/Village.jpg);*/
   height: auto;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: aliceblue;
 }
 
 .scroller_login {
