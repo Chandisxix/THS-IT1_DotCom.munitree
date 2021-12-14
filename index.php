@@ -40,13 +40,14 @@
 
 <body>
     <section id="content_login" class="scroller_login" style="width: 100%;height: 100%;">
-        <form class="border rounded border-dark" id="form_login" method="post" style="opacity: 0.95;height: 100%;max-width: none;width: 500px;background-color: rgb(30,40,51);margin-right: auto;margin-left: auto;padding-bottom: 0px;padding-top: 0px;padding-right: 40px;padding-left: 40px;">
+        <form class="border rounded border-dark" id="form_login" method="POST" style="opacity: 0.95;height: 100%;max-width: none;width: 500px;background-color: rgb(30,40,51);margin-right: auto;margin-left: auto;padding-bottom: 0px;padding-top: 0px;padding-right: 40px;padding-left: 40px;">
             <div id="form_image_frame" class="illustration"><img id="form_image" src="assets/img/pngaaa.com-1311242.png" style="width: 225px;margin: 0px;margin-left: 100px;margin-top: 50px;"></div>
             <p class="text-center intro-text" id="form_title" style="font-family: 'Nature Spirit Rough';color: rgb(255,255,255);font-size: 50px;line-height: 30px;width: 100%;height: auto;">Dot Com.munitree<br></p>
             <p class="text-center intro-text" id="form_subtitle" style="font-family: ABeeZee, sans-serif;color: rgb(255,255,255);font-size: 17px;line-height: 30px;width: 100%;">Welcome back home! Come right in!<br></p>
             <div class="form-group" id="form_username_bar"><input class="border-dark form-control" type="email" id="form_username" style="font-family: ABeeZee, sans-serif;color: rgb(255,255,255);background-color: rgba(255,255,255,0);" name="email" placeholder="Email" required></div>
             <div class="form-group" id="form_password_bar"><input class="border-dark form-control" type="password" id="form_password" name="password" placeholder="Password" style="font-family: ABeeZee, sans-serif;background-color: rgba(255,255,255,0);" required></div>
-            <div class="form-group" id="form_button_bar"><a class="btn btn-primary btn-block text-center border-success" name = "submit" type="submit" role="button" id="form_button" href="homepage.html" style="background-color: rgb(118,255,0);color: rgb(0,0,0);font-family: 'Nature Spirit Rough';font-size: 40px;">Log In<br>(Temporary Link to change later)</a></div>
+            <!-- <div class="form-group" id="form_button_bar"><a class="btn btn-primary btn-block text-center border-success" name = "submit" type="submit" role="button" id="form_button" style="background-color: rgb(118,255,0);color: rgb(0,0,0);font-family: 'Nature Spirit Rough';font-size: 40px;">Log In<br>(Temporary Link to change later)</a></div> -->
+            <button class="form-group" id="form_button_bar" name = "submit" type="submit" id="form_button" role="button" style="background-color: rgb(118,255,0);color: rgb(0,0,0);font-family: 'Nature Spirit Rough';font-size: 40px;">Log In</button>
             <div class="form-group text-center" id="form_button_bar-1" style="margin-bottom: 0px;">
                 <p class="text-center intro-text" id="form_msg" style="font-family: ABeeZee, sans-serif;color: rgb(255,255,255);font-size: 15px;width: 100%;line-height: 10px;margin-bottom: 15px;margin-top: 20px;">Don't have an account yet ?<br></p><a class="text-center" href="#" style="width: 100%;height: 100%;font-size: 15px;padding-bottom: 0px;padding-top: 0px;color: rgb(0,224,255);font-family: ABeeZee, sans-serif;line-height: 20px;">Create an account</a>
             </div>
@@ -61,3 +62,27 @@
 </body>
 
 </html>
+<?php
+    require("connect.php");
+
+    if(isset($_POST["submit"])){
+        $temail = $_POST["email"];
+        $tpword = $_POST["password"];
+        // $tpword = md5($tpword);
+        // $sql = mysqli_query($DBConnect, "SELECT upassword FROM users WHERE uemail='$temail'");
+        $sql = mysqli_query($DBConnect, "SELECT * FROM users WHERE uemail='$temail' AND upassword='$tpword' AND uRole!='unregistered'");
+        $fetch = mysqli_fetch_array($sql);
+        $dID = $fetch['uemail'];
+        $dPassword = $fetch['upassword'];
+        if($temail == $dID && $tpword == $dPassword){
+            $_SESSION['uemail'] = $temail;
+            $_SESSION['upassword'] = $tpword;
+            echo "<script type='text/javascript'> document.location = 'homepage.html'; </script>";
+        }
+        else{
+            echo "<script type='text/javascript'> document.location = 'index.php'; </script>";
+        }
+        
+
+    }
+?>
