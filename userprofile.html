@@ -18,8 +18,10 @@
     <link rel="stylesheet" href="assets/css/Nature%20Spirit%20Rough.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
     <link rel="stylesheet" href="assets/css/Button-Change-Text-on-Hover.css">
     <link rel="stylesheet" href="assets/css/dh-card-image-left-dark.css">
+    <link rel="stylesheet" href="assets/css/Drag--Drop-Upload-Form.css">
     <link rel="stylesheet" href="assets/css/Footer-with-social-media-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/iframe.css">
@@ -45,13 +47,18 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <div class="float-left float-md-right mt-5 mt-md-0 search-area"></div>
                     <ul class="navbar-nav ml-auto" style="width: auto;">
-                        <li class="nav-item"><a class="nav-link active" href="userprofile.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">My Profile</a></li>
-                        <li class="nav-item"><a class="nav-link" href="announcements.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Announcements</a></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item"><a class="nav-link" href="homepage.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Events</a></li>
                         <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Discussion Space</a></li>
                         <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Marketplace</a></li>
                         <li class="nav-item"><a class="nav-link" href="feedbackreports.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">FeedBack and Reports</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;color: var(--red);">Logout</a></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item" style="margin-left: 1vw;margin-right: 1vw;">
+                            <div class="nav-item dropdown"><a aria-expanded="false" data-toggle="dropdown" href="#"><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 3vw;"></a>
+                                <div class="dropdown-menu dropdown-menu-right bounce animated"><a class="dropdown-item" href="userprofile.html" style="font-family: 'Nature Spirit';font-weight: bold;letter-spacing: 2px;font-size: 20px;">My Profile</a><a class="dropdown-item" href="index.html" style="color: var(--red);font-family: 'Nature Spirit';font-size: 20px;font-weight: bold;letter-spacing: 2px;">LOGOUT</a></div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -96,29 +103,36 @@
                             <h1 style="font-family: 'Nature Spirit Rough';font-size: 50px;letter-spacing: 2px;font-weight: bold;">Edit Profile </h1>
                             <hr>
                             <div class="form-row">
+                                <div class="col-sm-12 col-md-6 col-xl-12">
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">My Address:</label>
+                                        <p style="font-family: ABeeZee, sans-serif;font-size: 20px;color: #6c757d;">User's Address Will Be Displayed Here</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
                                 <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;">First Name </label><input class="form-control" type="text" name="firstname" style="font-family: ABeeZee, sans-serif;"></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">First Name </label><input class="form-control" type="text" name="firstname" style="font-family: ABeeZee, sans-serif;"></div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;">Last Name </label><input class="form-control" type="text" name="lastname" style="font-family: ABeeZee, sans-serif;"></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Last Name </label><input class="form-control" type="text" name="lastname" style="font-family: ABeeZee, sans-serif;"></div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-sm-12 col-md-6 col-xl-12" style="width: 100%;">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;">Bio</label><textarea class="form-control" style="font-family: ABeeZee, sans-serif;height: auto;"></textarea></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">About Me</label><textarea class="form-control" style="font-family: ABeeZee, sans-serif;height: auto;"></textarea></div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;">Password </label><input class="form-control" type="password" name="password" autocomplete="off" required="" style="font-family: ABeeZee, sans-serif;"></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Change Password </label><input class="form-control" type="password" name="password" autocomplete="off" required="" style="font-family: ABeeZee, sans-serif;"></div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;">Confirm Password</label><input class="form-control" type="password" name="confirmpass" autocomplete="off" required="" style="font-family: ABeeZee, sans-serif;"></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Confirm New Password</label><input class="form-control" type="password" name="confirmpass" autocomplete="off" required="" style="font-family: ABeeZee, sans-serif;"></div>
                                 </div>
                             </div>
                             <hr>
                             <div class="form-row">
-                                <div class="col-md-12 content-right"><button class="btn btn-primary border rounded-pill form-btn" type="submit" style="font-family: ABeeZee, sans-serif;background: var(--green);">SAVE </button><button class="btn btn-danger border rounded-pill form-btn" type="reset" style="font-family: ABeeZee, sans-serif;">CANCEL </button></div>
+                                <div class="col-md-12 content-right"><button class="btn btn-success border rounded-pill form-btn" type="submit" style="font-family: ABeeZee, sans-serif;background: var(--green);">SAVE </button><button class="btn btn-danger border rounded-pill form-btn" type="reset" style="font-family: ABeeZee, sans-serif;">CANCEL </button></div>
                             </div>
                         </div>
                     </div>

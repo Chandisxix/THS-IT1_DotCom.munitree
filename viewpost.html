@@ -18,8 +18,10 @@
     <link rel="stylesheet" href="assets/css/Nature%20Spirit%20Rough.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
     <link rel="stylesheet" href="assets/css/Button-Change-Text-on-Hover.css">
     <link rel="stylesheet" href="assets/css/dh-card-image-left-dark.css">
+    <link rel="stylesheet" href="assets/css/Drag--Drop-Upload-Form.css">
     <link rel="stylesheet" href="assets/css/Footer-with-social-media-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/iframe.css">
@@ -45,13 +47,18 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <div class="float-left float-md-right mt-5 mt-md-0 search-area"></div>
                     <ul class="navbar-nav ml-auto" style="width: auto;">
-                        <li class="nav-item"><a class="nav-link" href="userprofile.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">My Profile</a></li>
-                        <li class="nav-item"><a class="nav-link" href="announcements.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Announcements</a></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item"><a class="nav-link" href="homepage.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Events</a></li>
                         <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Discussion Space</a></li>
                         <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Marketplace</a></li>
                         <li class="nav-item"><a class="nav-link" href="feedbackreports.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">FeedBack and Reports</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;color: var(--red);">Logout</a></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item" style="margin-left: 1vw;margin-right: 1vw;">
+                            <div class="nav-item dropdown"><a aria-expanded="false" data-toggle="dropdown" href="#"><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 3vw;"></a>
+                                <div class="dropdown-menu dropdown-menu-right bounce animated"><a class="dropdown-item" href="userprofile.html" style="font-family: 'Nature Spirit';font-weight: bold;letter-spacing: 2px;font-size: 20px;">My Profile</a><a class="dropdown-item" href="index.html" style="color: var(--red);font-family: 'Nature Spirit';font-size: 20px;font-weight: bold;letter-spacing: 2px;">LOGOUT</a></div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -146,21 +153,20 @@
                     </div>
                 </div>
                 <div class="container" style="background: #ffffff;padding-top: 8vh;padding-bottom: 8vh;width: 70vw;max-width: none;">
+                    <h1 class="text-center" id="post_title-1" style="width: 100%;color: rgb(255,255,255);font-family: 'Nature Spirit Rough';font-size: 50px;font-weight: normal;padding: 10px;background: var(--dark);letter-spacing: 1px;">This is the post title like wow so interesting!<br></h1>
                     <div class="row" id="post_title_bar">
-                        <h1 class="text-center" id="post_title" style="width: 100%;color: rgb(255,255,255);font-family: 'Nature Spirit Rough';font-size: 50px;font-weight: normal;padding: 10px;background: var(--dark);letter-spacing: 1px;">This is the post title like wow so interesting!<br></h1>
-                        <div class="col">
-                            <h1 style="text-align: right;font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 30px;">Date posted:</h1>
+                        <div class="col d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 1vh;">
+                            <h1 style="text-align: center;font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 30px;"></h1><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 5vw;height: 5vw;">
                         </div>
-                        <div class="col">
-                            <h1 style="font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 30px;">DateOfPosting</h1>
+                    </div>
+                    <div class="row" id="post_title_bar-1">
+                        <div class="col" style="margin-top: 2vh;">
+                            <h1 style="font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 25px;text-align: center;font-style: italic;"><em>PostAuthorUsername</em><br></h1>
                         </div>
                     </div>
                     <div class="row" id="post_title_bar">
                         <div class="col">
-                            <h1 style="text-align: right;font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 30px;">Author:</h1>
-                        </div>
-                        <div class="col">
-                            <h1 style="font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 30px;">PostAuthorUsername</h1>
+                            <h1 style="font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 20px;text-align: center;font-style: italic;"><em>DateOfPosting</em><br></h1>
                         </div>
                     </div>
                     <hr>
@@ -201,19 +207,17 @@
                             </div>
                             <hr>
                             <div class="row" id="post_desc_bar" style="padding: 15px;">
-                                <p class="text-center mb-0" id="post_desc-1" style="font-family: Cabin, sans-serif;font-size: 30px;margin-top: 15px;width: 100%;line-height: 32px;color: rgb(0,0,0);">An open-area modern house inspired by Japanese elements. Comes with its own swimming pool, furniture decorations, fireplace, and armor stands.</p>
+                                <p class="d-xl-flex justify-content-xl-start mb-0" id="post_desc-1" style="font-family: 'Open Sans', sans-serif;font-size: 25px;margin-top: 15px;width: 100%;line-height: 32px;color: rgb(0,0,0);text-align: left;">An open-area modern house inspired by Japanese elements. Comes with its own swimming pool, furniture decorations, fireplace, and armor stands.</p>
                             </div>
                             <div class="row" id="post_tags_bar" style="padding: 15px;">
                                 <h1 class="text-center" id="post_tags_head" style="width: 100%;font-family: ABeeZee, sans-serif;font-size: 25px;color: rgb(255,138,0);">Tags :</h1>
                                 <div class="d-inline-flex" id="post_tags_div" style="width: auto;margin-right: auto;margin-left: auto;color: rgb(0,0,0);">
-                                    <p class="text-center mb-0" id="post_tag-1" style="font-family: ABeeZee, sans-serif;font-size: 20px;margin-top: 15px;width: auto;margin-right: 10px;">SampleTag1</p>
-                                    <p class="text-center mb-0" id="post_tag-2" style="font-family: ABeeZee, sans-serif;font-size: 20px;margin-top: 15px;width: auto;margin-right: 10px;">SampleTag2<br></p>
-                                    <p class="text-center mb-0" id="post_tag-3" style="font-family: ABeeZee, sans-serif;font-size: 20px;margin-top: 15px;width: auto;margin-right: 10px;">SampleTag3</p>
+                                    <p class="text-center mb-0" id="post_tag-1" style="font-family: ABeeZee, sans-serif;font-size: 20px;margin-top: 15px;width: auto;margin-right: 10px;color: var(--secondary);font-style: italic;">#SampleTag1</p>
+                                    <p class="text-center mb-0" id="post_tag-2" style="font-family: ABeeZee, sans-serif;font-size: 20px;margin-top: 15px;width: auto;margin-right: 10px;color: var(--secondary);font-style: italic;">#SampleTag2<br></p>
+                                    <p class="text-center mb-0" id="post_tag-3" style="font-family: ABeeZee, sans-serif;font-size: 20px;margin-top: 15px;width: auto;margin-right: 10px;color: var(--secondary);font-style: italic;">#SampleTag3</p>
                                 </div>
                             </div>
-                            <div class="row text-center" id="post_delete_bar" style="padding: 15px;margin-top: 25px;">
-                                <h1 class="text-center" id="post_delete_head" style="width: 100%;font-family: ABeeZee, sans-serif;font-size: 25px;color: rgb(255,46,46);">Need it gone ? :(</h1><button class="btn btn-primary text-center border-warning" id="post_delete_button" type="button" style="background-color: #f00000;width: 300px;margin-left: auto;font-family: 'Nature Spirit Rough';margin-top: 20px;margin-right: auto;font-size: 30px;">DELETE POST</button>
-                            </div>
+                            <div class="row text-center" id="post_delete_bar" style="padding: 15px;margin-top: 25px;"><button class="btn btn-primary text-center border rounded-pill border-warning" id="post_delete_button" type="button" style="width: 300px;margin-left: auto;font-family: 'Nature Spirit Rough';margin-top: 20px;margin-right: auto;font-size: 30px;background: var(--orange);">EDIT POST</button><button class="btn btn-primary text-center border rounded-pill border-warning" id="post_delete_button" type="button" style="background-color: #f00000;width: 300px;margin-left: auto;font-family: 'Nature Spirit Rough';margin-top: 20px;margin-right: auto;font-size: 30px;">DELETE POST</button></div>
                         </div>
                     </div>
                 </div>

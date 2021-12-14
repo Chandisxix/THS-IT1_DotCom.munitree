@@ -24,7 +24,9 @@ a {
 }
 
 a:hover {
-  /*color: #08259a;*/
+  color: var(--green);
+  /*text-decoration-color: var(--green);*/
+  text-decoration: none;
 }
 
 img, svg {
