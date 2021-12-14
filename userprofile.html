@@ -111,32 +111,54 @@
                             </div>
                             <div class="form-row">
                                 <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">First Name </label><input class="form-control" type="text" name="firstname" style="font-family: ABeeZee, sans-serif;"></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">First Name </label><input class="form-control" type="text" name="firstname" style="font-family: ABeeZee, sans-serif;border-radius: 10px;"></div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Last Name </label><input class="form-control" type="text" name="lastname" style="font-family: ABeeZee, sans-serif;"></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Last Name </label><input class="form-control" type="text" name="lastname" style="font-family: ABeeZee, sans-serif;border-radius: 10px;"></div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-sm-12 col-md-6 col-xl-12" style="width: 100%;">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">About Me</label><textarea class="form-control" style="font-family: ABeeZee, sans-serif;height: auto;"></textarea></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">About Me</label><textarea class="form-control" style="font-family: ABeeZee, sans-serif;height: auto;border-radius: 10px;"></textarea></div>
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Change Password </label><input class="form-control" type="password" name="password" autocomplete="off" required="" style="font-family: ABeeZee, sans-serif;"></div>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Confirm New Password</label><input class="form-control" type="password" name="confirmpass" autocomplete="off" required="" style="font-family: ABeeZee, sans-serif;"></div>
+                                <div class="col-sm-12 col-md-6 col-xl-12">
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Enter current password to save changes</label><input class="form-control" type="password" style="width: 100%;border-radius: 10px;font-family: ABeeZee, sans-serif;" name="edit_passconfirm"></div>
                                 </div>
                             </div>
                             <hr>
                             <div class="form-row">
-                                <div class="col-md-12 content-right"><button class="btn btn-success border rounded-pill form-btn" type="submit" style="font-family: ABeeZee, sans-serif;background: var(--green);">SAVE </button><button class="btn btn-danger border rounded-pill form-btn" type="reset" style="font-family: ABeeZee, sans-serif;">CANCEL </button></div>
+                                <div class="col-md-12 content-right"><button class="btn btn-success border rounded-pill form-btn" type="submit" style="font-family: ABeeZee, sans-serif;background: var(--green);">SAVE </button><button class="btn btn-danger border rounded-pill form-btn" type="reset" style="font-family: ABeeZee, sans-serif;">CANCEL </button><button class="btn btn-link border rounded-pill border-white form-btn" type="button" style="font-family: ABeeZee, sans-serif;width: auto;max-width: none;" data-target="#editprofile_modal_changepass" data-toggle="modal">Change Password</button></div>
                             </div>
                         </div>
                     </div>
                 </form>
+                <div class="modal fade" role="dialog" tabindex="-1" id="editprofile_modal_changepass">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background: var(--orange);">
+                                <h4 class="modal-title" style="font-family: 'Nature Spirit Rough';font-size: 45px;font-weight: bold;letter-spacing: 2px;">Change Password</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-xl-12" style="padding-top: 1vh;">
+                                        <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Enter Old/Current Password</label><input type="password" style="width: 100%;border-radius: 10px;font-family: ABeeZee, sans-serif;height: 4vh;padding: 0.5vw;" name="changepass_old"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6" style="padding-top: 1vh;">
+                                        <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Enter New Password</label><input type="password" style="width: 100%;border-radius: 10px;font-family: ABeeZee, sans-serif;height: 4vh;padding: 0.5vw;" name="changepass_new"></div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6" style="padding-top: 1vh;">
+                                        <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Confirm New Password</label><input type="password" style="width: 100%;border-radius: 10px;font-family: ABeeZee, sans-serif;height: 4vh;padding: 0.5vw;" name="changepass_confirm"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-danger border rounded-pill" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-success border rounded-pill" type="submit">Save New Password</button></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
