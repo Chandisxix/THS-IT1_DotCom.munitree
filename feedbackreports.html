@@ -27,13 +27,16 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <link rel="stylesheet" href="assets/css/iframe.css">
     <link rel="stylesheet" href="assets/css/Latest-Blog.css">
+    <link rel="stylesheet" href="assets/css/Lightbox-Gallery.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
     <link rel="stylesheet" href="assets/css/Masonry-gallery-cards-responsive.css">
     <link rel="stylesheet" href="assets/css/Minimal-tabs-1.css">
     <link rel="stylesheet" href="assets/css/Minimal-tabs.css">
     <link rel="stylesheet" href="assets/css/Page-Title-Header.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Product-List.css">
     <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css">
     <link rel="stylesheet" href="assets/css/Profile-Edit-Form-2.css">
     <link rel="stylesheet" href="assets/css/Profile-Edit-Form-3.css">
@@ -46,6 +49,7 @@
     <link rel="stylesheet" href="assets/css/Table-With-Search-1.css">
     <link rel="stylesheet" href="assets/css/Table-With-Search.css">
     <link rel="stylesheet" href="assets/css/Tricky-Grid---2-Column-on-Desktop--Tablet-Flip-Order-of-12-Column-rows-on-Mobile.css">
+    <link rel="stylesheet" href="assets/css/User-Rating-F19690.css">
 </head>
 
 <body>
@@ -93,8 +97,74 @@
         </header>
     </section>
     <section id="content" class="scroller" style="height: 100%;">
-        <div class="overlay" style="height: 100%;color: rgb(0,0,0);background-color: rgba(30,30,30,0.7);"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfTLNWTsRAlZhpqzf5_3Ua8zUuDgIeOLZBEZYqC-x_YQqpe2Q/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Google Forms is Loading…</iframe>
-</div>
+        <div class="overlay" style="height: 100%;color: rgb(0,0,0);background-color: rgba(30,30,30,0.7);">
+            <div class="container" style="background: rgba(255,255,255,0);width: 70vw;max-width: none;">
+                <div class="page-titlebox" style="width: 30vw;height: auto;padding-top: 2vh;padding-bottom: 2vh;padding-left: 1vw;padding-right: 1vw;max-width: 30vw;border-radius: 16px;border-top-left-radius: 0px;border-top-right-radius: 0px;background: var(--red);border-width: 0px;border-top-width: 0px;">
+                    <section style="height: auto;">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="page-title" style="width: 100%;text-align: center;font-family: ABeeZee, sans-serif;color: rgb(255,255,255);font-size: 1.8vh;">TODAY IS</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 id="header_date-and-day" class="page-title" style="width: 100%;text-align: center;margin-top: 1vh;font-weight: bold;font-family: ABeeZee, sans-serif;letter-spacing: 5px;color: rgb(255,255,255);font-size: 1.8vh;">Date and Day<script>
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; //array of days
+      var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] //array of months
+      var date = new Date(); //creating Date object
+      var currentDay = days[date.getDay()]; //determining day using the array and method 
+      var currentMonth = months[date.getMonth()]; //determining month using the array and method
+      var currentDate = date.getDate(); //current date
+      var currentYear = date.getFullYear(); //current year
+    
+      
+    
+      var hrs = date.getHours(), min = date.getMinutes(); //current time (hours and minutes)
+      var suffix = 'AM';
+      if(hrs >= 12){
+        hrs -= 12;
+        suffix = 'PM';
+      }
+      if(hrs < 10){
+        hrs = "0" + hrs;
+      }
+      if(min < 10){
+        min = "0" + min;
+      }
+      document.getElementById('header_date-and-day').innerHTML = currentMonth + " " + currentDate + ", " + currentYear;
+</script></h1>
+                                <h1 id="header_time" class="page-title" style="width: 100%;text-align: center;margin-top: 1vh;font-weight: bold;font-family: ABeeZee, sans-serif;letter-spacing: 5px;color: rgb(255,255,255);font-size: 1.8vh;">Time<script>
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; //array of days
+      var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] //array of months
+      var date = new Date(); //creating Date object
+      var currentDay = days[date.getDay()]; //determining day using the array and method 
+      var currentMonth = months[date.getMonth()]; //determining month using the array and method
+      var currentDate = date.getDate(); //current date
+      var currentYear = date.getFullYear(); //current year
+    
+      
+    
+      var hrs = date.getHours(), min = date.getMinutes(); //current time (hours and minutes)
+      var suffix = 'AM';
+      if(hrs >= 12){
+        hrs -= 12;
+        suffix = 'PM';
+      }
+      if(hrs < 10){
+        hrs = "0" + hrs;
+      }
+      if(min < 10){
+        min = "0" + min;
+      }
+      document.getElementById('header_time').innerHTML = currentDay + ", " + hrs + ":" + min + suffix;
+</script></h1>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfTLNWTsRAlZhpqzf5_3Ua8zUuDgIeOLZBEZYqC-x_YQqpe2Q/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Google Forms is Loading…</iframe>
+
+        </div>
     </section>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -112,6 +182,7 @@
     <script src="assets/js/DataTable---Fully-BSS-Editable.js"></script>
     <script src="assets/js/clean-blog.js"></script>
     <script src="assets/js/current-day.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
     <script src="assets/js/Table-With-Search.js"></script>
 </body>
