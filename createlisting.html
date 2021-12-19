@@ -16,11 +16,13 @@
     <link rel="stylesheet" href="assets/css/Minecrafter%20Alt.css">
     <link rel="stylesheet" href="assets/css/Nature%20Spirit.css">
     <link rel="stylesheet" href="assets/css/Nature%20Spirit%20Rough.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
     <link rel="stylesheet" href="assets/css/Boostrap-Tabs.css">
     <link rel="stylesheet" href="assets/css/Button-Change-Text-on-Hover.css">
+    <link rel="stylesheet" href="assets/css/Comment.css">
     <link rel="stylesheet" href="assets/css/dh-card-image-left-dark.css">
     <link rel="stylesheet" href="assets/css/Drag--Drop-Upload-Form.css">
     <link rel="stylesheet" href="assets/css/Footer-with-social-media-icons.css">
@@ -81,9 +83,9 @@
                 <div class="row" style="padding-top: 120px;">
                     <div class="col-lg-8 text-center m-auto">
                         <div id="welcome" style="width: 100%;"></div>
-                        <div class="row" id="userpic"><img class="d-none d-xl-flex" data-bss-hover-animate="tada" src="assets/img/Marketplace.png" style="width: 17vw;margin-left: auto;margin-right: auto;height: 25vh;"></div>
+                        <div class="row" id="userpic"><img class="d-none d-xl-flex" data-bss-hover-animate="tada" src="assets/img/Marketplace.png" style="width: 18vw;margin-left: auto;margin-right: auto;height: 25vh;"></div>
                         <div class="row text-center" id="welcome_bar">
-                            <p data-bss-hover-animate="rubberBand" id="username" style="font-family: 'Nature Spirit Rough';font-weight: bold;font-size: 60px;color: var(--green);margin-top: 0px;margin-bottom: 0px;height: 100%;letter-spacing: 2px;width: 100%;"><br><strong>Marketplace: View Listing</strong><br><br></p>
+                            <p data-bss-hover-animate="rubberBand" id="username" style="font-family: 'Nature Spirit Rough';font-weight: bold;font-size: 60px;color: var(--green);margin-top: 0px;margin-bottom: 0px;height: 100%;letter-spacing: 2px;width: 100%;"><br><strong>Marketplace: Create Listing</strong><br><br></p>
                         </div>
                         <div id="logged_in_bar1">
                             <p id="logged_in_msg1" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(255,255,255);font-size: 20px;line-height: 30px;">Change<br></p>
@@ -172,49 +174,46 @@
                 <form>
                     <div class="form-row profile-row">
                         <div class="col-md-4 relative">
-                            <div class="avatar" style="height: 300px;max-width: 420px;width: 420px;max-height: 300px;padding: 6px;"><img style="width: 100%;height: 100%;border-radius: 0px;" src="assets/img/overview.jpg"></div><input class="form-control-file form-control" type="file" name="avatar-file" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 5vh;">
+                            <div style="height: 300px;max-width: 430px;width: 430px;max-height: 300px;padding: 6px;"><img class="img-fluid" style="width: 100%;height: 100%;border-radius: 0px;" src="assets/img/product-aeon-feature.jpg"></div><label style="font-family: ABeeZee, sans-serif;color: rgb(255,0,0);">*</label><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Upload Thumbnail:</label><input class="form-control-file form-control" type="file" name="avatar-file" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 0vh;" required="" accept="image/*">
+                            <section class="photo-gallery" style="height: auto;margin-top: 5vh;">
+                                <div class="container"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Upload additional photos:</label><input class="form-control-file form-control" type="file" name="avatar-file" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 0vh;" multiple="">
+                                    <p style="font-family: ABeeZee, sans-serif;font-size: 20px;color: #6c757d;">Additional Photos:</p>
+                                    <div class="form-row photos">
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg"><img class="img-fluid" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/campfire.gif"><img class="img-fluid" src="assets/img/campfire.gif" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Login.jpg"><img class="img-fluid" src="assets/img/Login.jpg" style="height: 90px;width: 90px;max-width: 90px;max-height: 90px;"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/housetemp1.png"><img class="img-fluid" src="assets/img/housetemp1.png" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Banner_Profile.jpg"><img class="img-fluid" src="assets/img/Banner_Profile.jpg" style="width: 90px;height: 90px;max-width: 90px;max-height: 90px;"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Landing.png"><img class="img-fluid" id="testpic" src="assets/img/Landing.png" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
-                        <div class="col-md-8">
-                            <h1 style="font-family: ABeeZee, sans-serif;font-size: 50px;font-weight: bold;">Name of Listing</h1>
-                            <p style="font-family: ABeeZee, sans-serif;font-size: 20px;color: #6c757d;">Product/Service</p>
-                            <hr>
+                        <div class="col-md-8"><label style="font-family: ABeeZee, sans-serif;font-size: 30px;color: rgb(255,0,0);">*</label><label style="font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 30px;">Name of Listing:</label><input class="form-control" type="text" style="font-family: ABeeZee, sans-serif;" maxlength="70" required="">
+                            <p style="font-family: ABeeZee, sans-serif;font-size: 15px;color: #919693;margin-bottom: 10px;margin-top: 6px;">Maximum 70 characters</p><label style="font-family: ABeeZee, sans-serif;color: rgb(255,0,0);">*</label><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Category:</label><select class="form-control form-control" name="category" style="width: 10vw;font-family: ABeeZee, sans-serif;" required="">
+                                <option value="all">Product</option>
+                                <option value="service">Service</option>
+                            </select>
+                            <hr><label style="font-family: ABeeZee, sans-serif;color: rgb(255,0,0);">*</label><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Price:</label>
                             <div class="form-row">
                                 <div class="col-auto">
                                     <h1 style="font-weight: bold;font-family: Cabin, sans-serif;">Php</h1>
                                 </div>
-                                <div class="col">
-                                    <h1 id="viewlisting_price_value" style="font-family: Cabin, sans-serif;font-weight: bold;">0.00</h1>
-                                </div>
+                                <div class="col"><input class="form-control" type="number" style="font-family: Cabin, sans-serif;font-size: 25px;font-weight: bold;height: 100%;" required=""></div>
                             </div>
-                            <div class="form-row">
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">First Name </label><input class="form-control" type="text" name="firstname" style="font-family: ABeeZee, sans-serif;border-radius: 10px;"></div>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Last Name </label><input class="form-control" type="text" name="lastname" style="font-family: ABeeZee, sans-serif;border-radius: 10px;"></div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">E-Mail Address</label><input class="form-control" type="email" style="border-radius: 10px;font-family: ABeeZee, sans-serif;"></div>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Contact Number</label><input class="form-control" type="tel" style="border-radius: 10px;font-family: ABeeZee, sans-serif;"></div>
+                            <div class="form-row" style="margin-top: 5vh;">
+                                <div class="col-sm-12 col-md-6 col-xl-12" style="width: 100%;">
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Description:</label><textarea class="form-control" style="font-family: ABeeZee, sans-serif;height: auto;border-radius: 10px;"></textarea></div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-sm-12 col-md-6 col-xl-12" style="width: 100%;">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">About Me</label><textarea class="form-control" style="font-family: ABeeZee, sans-serif;height: auto;border-radius: 10px;"></textarea></div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-sm-12 col-md-6 col-xl-12">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Enter current password to save changes</label><input class="form-control" type="password" style="width: 100%;border-radius: 10px;font-family: ABeeZee, sans-serif;" name="edit_passconfirm"></div>
+                                    <div class="form-group d-xl-flex justify-content-xl-end"><label style="font-family: ABeeZee, sans-serif;color: rgb(255,0,0);font-size: 15px;">* Required</label></div>
                                 </div>
                             </div>
                             <hr>
                             <div class="form-row">
-                                <div class="col-md-12 content-right"><button class="btn btn-success border rounded-pill form-btn" type="submit" style="font-family: ABeeZee, sans-serif;background: var(--green);">SAVE </button><button class="btn btn-danger border rounded-pill form-btn" type="reset" style="font-family: ABeeZee, sans-serif;">CANCEL </button><button class="btn btn-link border rounded-pill border-white form-btn" type="button" style="font-family: ABeeZee, sans-serif;width: auto;max-width: none;" data-target="#editprofile_modal_changepass" data-toggle="modal">Change Password</button></div>
+                                <div class="col-md-12 content-right"><button class="btn btn-success border rounded-pill form-btn" type="submit" style="font-family: ABeeZee, sans-serif;background: var(--green);">Create Listing</button><a class="btn btn-danger border rounded-pill form-btn" role="button" href="marketplace.html" style="font-family: ABeeZee, sans-serif;">Cancel</a></div>
                             </div>
                         </div>
                     </div>

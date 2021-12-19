@@ -37,7 +37,7 @@ p.hero-subtitle {
 }
 
 .btn-primary.focus, .btn-primary:focus {
-  box-shadow: 0 0 0 0 #048f83!important;
+  /*box-shadow: 0 0 0 0 #048f83!important;*/
 }
 
 .btn-primary:hover {
@@ -47,8 +47,8 @@ p.hero-subtitle {
 }
 
 .btn.btn-primary {
-  background-color: #048f83!important;
-  border-color: #048f83!important;
+  /*background-color: #048f83!important;*/
+  /*border-color: #048f83!important;*/
 }
 
 .btn-primary.focus, .btn-primary:focus {
