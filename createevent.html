@@ -76,21 +76,21 @@
                 </div>
             </div>
         </nav>
-        <header class="text-center masthead" id="header" style="height: 60vh;background: url(&quot;assets/img/Banner_Discussion.jpg&quot;) center / cover no-repeat;margin-bottom: 2px;">
+        <header class="text-center masthead" id="header" style="height: 60vh;background: url(&quot;assets/img/Banner_Events.jpg&quot;) center / cover no-repeat;margin-bottom: 2px;">
             <div class="container">
-                <div class="overlay" style="height: 100%;background: #212529;"></div>
+                <div class="overlay" style="height: 100%;background: #000000;"></div>
                 <div class="row" style="padding-top: 120px;">
                     <div class="col-lg-8 text-center m-auto">
                         <div id="welcome" style="width: 100%;"></div>
-                        <div class="row" id="userpic"><img class="d-none d-xl-flex" data-bss-hover-animate="tada" src="assets/img/Discussion.png" style="margin-left: auto;margin-right: auto;height: 25vh;width: 18vw;"></div>
+                        <div class="row" id="userpic"><img class="d-none d-xl-flex" data-bss-hover-animate="tada" src="assets/img/Events.png" style="margin-left: auto;margin-right: auto;height: 25vh;width: 18vw;"></div>
                         <div class="row text-center" id="welcome_bar">
-                            <p data-bss-hover-animate="rubberBand" id="username" style="font-family: 'Nature Spirit Rough';font-weight: bold;font-size: 60px;color: var(--yellow);margin-top: 0px;margin-bottom: 0px;height: 100%;letter-spacing: 2px;width: 100%;"><br>Discussion Space: View Post<br><br></p>
+                            <p data-bss-hover-animate="rubberBand" id="username" style="font-family: 'Nature Spirit Rough';font-weight: bold;font-size: 60px;color: var(--orange);margin-top: 0px;margin-bottom: 0px;height: 100%;letter-spacing: 2px;width: 100%;"><br>Create Event<br><br></p>
                         </div>
                         <div id="logged_in_bar1">
-                            <p id="logged_in_msg1" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(255,255,255);font-size: 20px;line-height: 30px;">Hey, what's up?<br></p>
+                            <p id="logged_in_msg1" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(255,255,255);font-size: 20px;line-height: 30px;">Feeling bored? Nothing to do?<br></p>
                         </div>
                         <div id="logged_in_bar2">
-                            <p id="logged_in_msg2" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(230,230,230);font-size: 20px;line-height: 30px;">Here you can fully view the post you were just looking at!</p>
+                            <p id="logged_in_msg2" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(230,230,230);font-size: 20px;line-height: 30px;">Check out some events happening in the community!</p>
                         </div>
                     </div>
                 </div>
@@ -165,72 +165,100 @@
                         </section>
                     </div>
                 </div>
-                <div class="container" style="background: #ffffff;padding-top: 8vh;padding-bottom: 8vh;width: 70vw;max-width: none;">
-                    <h1 class="text-center" id="post_title-1" style="width: 100%;color: rgb(255,255,255);font-family: 'Nature Spirit Rough';font-size: 50px;font-weight: normal;padding: 10px;background: var(--dark);letter-spacing: 1px;">This is the post title like wow so interesting!<br></h1>
-                    <div class="row" id="post_title_bar">
-                        <div class="col d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 1vh;">
-                            <h1 style="text-align: center;font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 30px;"></h1><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 5vw;height: 5vw;">
+                <div class="container" style="background: #ffffff;padding-top: 5vh;padding-bottom: 5vh;width: 70vw;max-width: none;padding-right: 0px;padding-left: 0px;">
+                    <div class="row d-xl-flex" id="post_pic_bar" style="padding-top: 0px;height: 60vh;width: 70vw;margin-left: 0px;margin-right: 0px;"><iframe allowfullscreen="" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDU8PRLLPIOp2XDtXqDA0FwiDvvoI3jg4k&amp;q=Ayala+Alabang+Village&amp;zoom=16" width="100%" height="100%" style="padding-right: 0px;padding-left: 0px;"></iframe></div>
+                </div>
+                <div class="container profile profile-view" id="profile" style="background: #ffffff;width: 70vw;max-width: none;">
+                    <div class="row">
+                        <div class="col-md-12 alert-col relative">
+                            <div class="alert alert-info alert-dismissible absolue center" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span>Profile save with success</span></div>
                         </div>
                     </div>
-                    <div class="row" id="post_title_bar-1">
-                        <div class="col" style="margin-top: 2vh;">
-                            <h1 style="font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 25px;text-align: center;font-style: italic;"><em>PostAuthorUsername</em><br></h1>
+                    <form>
+                        <div class="form-row profile-row">
+                            <div class="col-md-4 relative">
+                                <div style="height: 300px;max-width: 430px;width: 430px;max-height: 300px;padding: 6px;"><img class="img-fluid" style="width: 100%;height: 100%;border-radius: 0px;" src="assets/img/product-aeon-feature.jpg"></div><label style="font-family: ABeeZee, sans-serif;color: rgb(255,0,0);">*</label><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Upload Thumbnail:</label><input class="form-control-file form-control" type="file" name="avatar-file" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 0vh;" required="" accept="image/*">
+                                <section class="photo-gallery" style="height: auto;margin-top: 5vh;">
+                                    <div class="container"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Upload additional photos:</label><input class="form-control-file form-control" type="file" name="avatar-file" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 0vh;" multiple="">
+                                        <p style="font-family: ABeeZee, sans-serif;font-size: 20px;color: #6c757d;">Additional Photos:</p>
+                                        <div class="form-row photos">
+                                            <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg"><img class="img-fluid" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/campfire.gif"><img class="img-fluid" src="assets/img/campfire.gif" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Login.jpg"><img class="img-fluid" src="assets/img/Login.jpg" style="height: 90px;width: 90px;max-width: 90px;max-height: 90px;"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/housetemp1.png"><img class="img-fluid" src="assets/img/housetemp1.png" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Banner_Profile.jpg"><img class="img-fluid" src="assets/img/Banner_Profile.jpg" style="width: 90px;height: 90px;max-width: 90px;max-height: 90px;"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Landing.png"><img class="img-fluid" id="testpic" src="assets/img/Landing.png" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-row">
+                                    <div class="col" style="margin-bottom: 2vh;"><label style="font-family: ABeeZee, sans-serif;font-size: 30px;color: rgb(255,0,0);">*</label><label style="font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 30px;">Name of Event:</label><input class="form-control" type="text" style="font-family: ABeeZee, sans-serif;" maxlength="70" required=""></div>
+                                </div>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="col"><label style="font-family: ABeeZee, sans-serif;color: rgb(255,0,0);">*</label><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Start Date and Time:</label><input class="form-control" type="datetime-local"></div>
+                                </div>
+                                <div class="form-row" style="margin-bottom: 2vh;">
+                                    <div class="col" style="margin-top: 1vh;"><label style="font-family: ABeeZee, sans-serif;color: rgb(255,0,0);">*</label><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">End Date and Time:</label><input class="form-control" type="datetime-local"></div>
+                                </div>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="col"><label style="font-family: ABeeZee, sans-serif;color: rgb(255,0,0);">*</label><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Venue:</label>
+                                        <div class="custom-control custom-radio"><input type="radio" id="customRadio1" class="custom-control-input" name="customRadio" checked=""><label class="custom-control-label" for="customRadio1" style="font-family: ABeeZee, sans-serif;font-size: 15px;"><strong>Community-owned area</strong><br></label></div><select class="form-control form-control" name="category" style="width: 10vw;font-family: 'Open Sans', sans-serif;" required="">
+                                            <option value="all">Community Venue</option>
+                                            <option value="service">Service</option>
+                                        </select>
+                                        <div></div>
+                                        <p style="font-family: ABeeZee, sans-serif;font-size: 15px;color: #919693;margin-bottom: 3vh;margin-top: 2vh;">or</p>
+                                        <fieldset>
+                                            <div class="custom-control custom-radio"><input type="radio" id="customRadio2" class="custom-control-input" name="customRadio"><label class="custom-control-label" for="customRadio2" style="font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 15px;">Household</label></div>
+                                        </fieldset><select class="form-control form-control" name="category" style="width: 10vw;font-family: 'Open Sans', sans-serif;" required="">
+                                            <option value="all">Street Name</option>
+                                            <option value="service">Service</option>
+                                        </select><input class="form-control" type="text" placeholder="House Number" style="font-family: 'Open Sans', sans-serif;margin-top: 1vh;">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="col"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Description:</label><textarea class="form-control" style="font-family: ABeeZee, sans-serif;height: auto;border-radius: 10px;"></textarea></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-sm-12 col-md-6 col-xl-12" style="width: 100%;">
+                                        <div class="form-group d-xl-flex justify-content-xl-end"><label style="font-family: ABeeZee, sans-serif;color: rgb(255,0,0);font-size: 15px;">* Required</label></div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="col-md-12 content-right"><button class="btn btn-success border rounded-pill form-btn" type="submit" style="font-family: ABeeZee, sans-serif;background: var(--green);">Create Event</button><a class="btn btn-danger border rounded-pill form-btn" role="button" href="events.html" style="font-family: ABeeZee, sans-serif;">Cancel</a></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row" id="post_title_bar">
-                        <div class="col">
-                            <h1 style="font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 20px;text-align: center;font-style: italic;"><em>DateOfPosting</em><br></h1>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row d-xl-flex justify-content-xl-center" id="post_pic_bar" style="padding-top: 40px;"><img class="img-fluid d-xl-flex justify-content-xl-center" id="post_pic" src="assets/img/house_chan_sample/cover.png" style="width: 750px;"></div>
-                    <div class="row" id="post_detail_bar">
-                        <div id="post_detail_margins" class="bg-faded p-5 rounded" style="color: rgb(255,255,255);padding: 49px;width: 100%;">
-                            <div class="row d-xl-flex justify-content-xl-center" id="post_thumb_bar" style="padding: 15px;padding-left: 90px;">
-                                <div id="thumb_box-1" style="padding-left: 0px;width: auto;">
-                                    <div id="thumb_frame-1" class="col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;"><a id="thumb_link-1" class="text-right thumbnail" href="assets/img/house_chan_sample/cover.png" target="_blank"><img id="thumb_pic-1" class="img-responsive" src="assets/img/house_chan_sample/cover.png" style="max-width: 150px;"></a></div>
+                    </form>
+                    <div class="modal fade" role="dialog" tabindex="-1" id="editprofile_modal_changepass">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background: var(--orange);">
+                                    <h4 class="modal-title" style="font-family: 'Nature Spirit Rough';font-size: 45px;font-weight: bold;letter-spacing: 2px;">Change Password</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                 </div>
-                                <div id="thumb_box-2" style="padding-left: 0px;width: auto;">
-                                    <div id="thumb_frame-2" class="col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;"><a id="thumb_link-2" class="text-right thumbnail" href="assets/img/house_chan_sample/front.png" target="_blank"><img id="thumb_pic-2" class="img-responsive" src="assets/img/house_chan_sample/front.png" style="max-width: 150px;"></a></div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-xl-12" style="padding-top: 1vh;">
+                                            <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Enter Old/Current Password</label><input type="password" style="width: 100%;border-radius: 10px;font-family: ABeeZee, sans-serif;height: 4vh;padding: 0.5vw;" name="changepass_old"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6" style="padding-top: 1vh;">
+                                            <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Enter New Password</label><input type="password" style="width: 100%;border-radius: 10px;font-family: ABeeZee, sans-serif;height: 4vh;padding: 0.5vw;" name="changepass_new"></div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6" style="padding-top: 1vh;">
+                                            <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Confirm New Password</label><input type="password" style="width: 100%;border-radius: 10px;font-family: ABeeZee, sans-serif;height: 4vh;padding: 0.5vw;" name="changepass_confirm"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div id="thumb_box-3" style="padding-left: 0px;width: auto;">
-                                    <div id="thumb_frame-3" class="col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;"><a id="thumb_link-3" class="text-right thumbnail" href="assets/img/house_chan_sample/layout.png" target="_blank"><img id="thumb_pic-3" class="img-responsive" src="assets/img/house_chan_sample/layout.png" style="max-width: 150px;"></a></div>
-                                </div>
-                                <div id="thumb_box-4" style="padding-left: 0px;width: auto;">
-                                    <div id="thumb_frame-4" class="col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;"><a id="thumb_link-4" class="text-right thumbnail" href="assets/img/house_chan_sample/bedroom.png" target="_blank"><img id="thumb_pic-4" class="img-responsive" src="assets/img/house_chan_sample/bedroom.png" style="max-width: 150px;"></a></div>
-                                </div>
-                                <div id="thumb_box-5" style="padding-left: 0px;width: auto;">
-                                    <div id="thumb_frame-5" class="col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;"><a id="thumb_link-5" class="text-right thumbnail" href="assets/img/house_chan_sample/bedview.png" target="_blank"><img id="thumb_pic-5" class="img-responsive" src="assets/img/house_chan_sample/bedview.png" style="max-width: 150px;"></a></div>
-                                </div>
-                                <div id="thumb_box-6" style="padding-left: 0px;width: auto;">
-                                    <div id="thumb_frame-6" class="col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;"><a id="thumb_link-6" class="text-right thumbnail" href="assets/img/house_chan_sample/livingroom.png" target="_blank"><img id="thumb_pic-6" class="img-responsive" src="assets/img/house_chan_sample/livingroom.png" style="max-width: 150px;"></a></div>
-                                </div>
-                                <div id="thumb_box-7" style="padding-left: 0px;width: auto;">
-                                    <div id="thumb_frame-7" class="col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;"><a id="thumb_link-7" class="text-right thumbnail" href="assets/img/house_chan_sample/workshop.png" target="_blank"><img id="thumb_pic-7" class="img-responsive" src="assets/img/house_chan_sample/workshop.png" style="max-width: 150px;"></a></div>
-                                </div>
-                                <div id="thumb_box-8" style="padding-left: 0px;width: auto;">
-                                    <div id="thumb_frame-8" class="col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;"><a id="thumb_link-8" class="text-right thumbnail" href="assets/img/house_chan_sample/dining.png" target="_blank"><img id="thumb_pic-8" class="img-responsive" src="assets/img/house_chan_sample/dining.png" style="max-width: 150px;"></a></div>
-                                </div>
-                                <div id="thumb_box-9" style="padding-left: 0px;width: auto;">
-                                    <div id="thumb_frame-9" class="col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;"><a id="thumb_link-9" class="text-right thumbnail" href="assets/img/house_chan_sample/skyview.png" target="_blank"><img id="thumb_pic-9" class="img-responsive" src="assets/img/house_chan_sample/skyview.png" style="max-width: 150px;"></a></div>
-                                </div>
-                                <div class="d-xl-flex" id="thumb_box-10" style="padding-left: 0px;width: auto;">
-                                    <div id="thumb_frame-10" class="col-sm-4 col-xs-6 col-md-3 col-lg-3" style="padding: 10px;padding-left: 10px;padding-right: 10px;padding-top: 10px;"><a id="thumb_link-10" class="text-right thumbnail" href="assets/img/house_chan_sample/back.png" target="_blank"><img id="thumb_pic-10" class="img-responsive" src="assets/img/house_chan_sample/back.png" style="max-width: 150px;"></a></div>
-                                </div>
+                                <div class="modal-footer"><button class="btn btn-danger border rounded-pill" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-success border rounded-pill" type="submit">Save New Password</button></div>
                             </div>
-                            <hr>
-                            <div class="row" id="post_desc_bar" style="padding: 15px;">
-                                <p class="d-xl-flex justify-content-xl-start mb-0" id="post_desc-1" style="font-family: 'Open Sans', sans-serif;font-size: 25px;margin-top: 15px;width: 100%;line-height: 32px;color: rgb(0,0,0);text-align: left;">An open-area modern house inspired by Japanese elements. Comes with its own swimming pool, furniture decorations, fireplace, and armor stands.</p>
-                            </div>
-                            <div class="row" id="post_tags_bar" style="padding: 15px;">
-                                <h1 class="text-center" id="post_tags_head" style="width: 100%;font-family: ABeeZee, sans-serif;font-size: 25px;color: rgb(255,138,0);">Tags :</h1>
-                                <div class="d-inline-flex" id="post_tags_div" style="width: auto;margin-right: auto;margin-left: auto;color: rgb(0,0,0);">
-                                    <p class="text-center mb-0" id="post_tag-1" style="font-family: ABeeZee, sans-serif;font-size: 20px;margin-top: 15px;width: auto;margin-right: 10px;color: var(--secondary);font-style: italic;">#SampleTag1</p>
-                                    <p class="text-center mb-0" id="post_tag-2" style="font-family: ABeeZee, sans-serif;font-size: 20px;margin-top: 15px;width: auto;margin-right: 10px;color: var(--secondary);font-style: italic;">#SampleTag2<br></p>
-                                    <p class="text-center mb-0" id="post_tag-3" style="font-family: ABeeZee, sans-serif;font-size: 20px;margin-top: 15px;width: auto;margin-right: 10px;color: var(--secondary);font-style: italic;">#SampleTag3</p>
-                                </div>
-                            </div>
-                            <div class="row text-center" id="post_delete_bar" style="padding: 15px;margin-top: 25px;"><button class="btn btn-primary text-center border rounded-pill border-warning" id="post_delete_button" type="button" style="width: 300px;margin-left: auto;font-family: 'Nature Spirit Rough';margin-top: 20px;margin-right: auto;font-size: 30px;background: var(--orange);">EDIT POST</button><button class="btn btn-primary text-center border rounded-pill border-warning" id="post_delete_button" type="button" style="background-color: #f00000;width: 300px;margin-left: auto;font-family: 'Nature Spirit Rough';margin-top: 20px;margin-right: auto;font-size: 30px;">DELETE POST</button></div>
                         </div>
                     </div>
                 </div>
