@@ -19,9 +19,7 @@ p {
 }
 
 a:hover {
-  color: var(--green);
-  /*text-decoration-color: var(--green);*/
-  text-decoration: none;
+  color: #08259a;
 }
 
 img, svg {
@@ -94,6 +92,10 @@ img, svg {
 
 .mb-4 {
   margin-bottom: 1.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
 }
 
 .text-muted {

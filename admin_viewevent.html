@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>DotCom.munitree</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/-Filterable-Cards-.css">
+    <link rel="stylesheet" href="assets/css/Article-Cards.css">
     <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
     <link rel="stylesheet" href="assets/css/Boostrap-Tabs.css">
     <link rel="stylesheet" href="assets/css/Button-Change-Text-on-Hover.css">
@@ -34,6 +36,7 @@
     <link rel="stylesheet" href="assets/css/Latest-Blog.css">
     <link rel="stylesheet" href="assets/css/Lightbox-Gallery.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/Masonry-gallery-cards-responsive-1.css">
     <link rel="stylesheet" href="assets/css/Masonry-gallery-cards-responsive.css">
     <link rel="stylesheet" href="assets/css/Minimal-tabs-1.css">
     <link rel="stylesheet" href="assets/css/Minimal-tabs.css">
@@ -64,7 +67,7 @@
                         <li class="nav-item"></li>
                         <li class="nav-item"><a class="nav-link" href="admin_homepage.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="events.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Events</a></li>
-                        <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Discussion Space</a></li>
+                        <li class="nav-item"><a class="nav-link" href="discussionspace.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Discussion Space</a></li>
                         <li class="nav-item"><a class="nav-link" href="marketplace.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Marketplace</a></li>
                         <li class="nav-item"><a class="nav-link" href="admin_feedbackreports.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">FeedBack and Reports</a></li>
                         <li class="nav-item" style="margin-left: 1vw;margin-right: 1vw;">
@@ -168,14 +171,12 @@
                 <div class="container" style="background: #ffffff;padding-top: 8vh;padding-bottom: 8vh;width: 70vw;max-width: none;">
                     <h1 class="text-center" id="post_title-1" style="width: 100%;color: rgb(255,255,255);font-family: 'Nature Spirit Rough';font-size: 50px;font-weight: normal;padding: 10px;background: var(--orange);letter-spacing: 1px;">EVENT Title<br></h1>
                     <div class="row" id="post_title_bar-2">
-                        <div class="col d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 1vh;">
-                            <h1 style="text-align: center;font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 30px;"></h1><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 5vw;height: 5vw;">
-                        </div>
+                        <div class="col d-xl-flex justify-content-xl-center align-items-xl-center" style="margin-top: 1vh;"><a href="userprofile.html"><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 5vw;height: 5vw;"></a></div>
                     </div>
                     <div class="row" id="post_title_bar-1">
-                        <div class="col" style="margin-top: 2vh;">
-                            <h1 style="font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 25px;text-align: center;font-style: italic;"><em>EventCreatorUsername</em><br></h1>
-                        </div>
+                        <div class="col" style="margin-top: 2vh;"><a href="userprofile.html">
+                                <h1 style="font-family: ABeeZee, sans-serif;color: var(--gray);font-size: 25px;text-align: center;font-style: italic;"><em>EventCreatorUsername</em><br></h1>
+                            </a></div>
                     </div>
                     <div class="row" id="post_title_bar-3">
                         <div class="col">
@@ -253,7 +254,54 @@
                             <div class="row" id="post_tags_bar" style="padding: 15px;">
                                 <h1 class="text-center" id="post_tags_head" style="width: 100%;font-family: 'Nature Spirit Rough';font-size: 65px;color: rgb(0,0,0);font-weight: bold;margin-top: 5vh;letter-spacing: 2px;">WE HOPE TO SEE YOU THERE! :)</h1>
                             </div>
-                            <div class="row text-center" id="post_delete_bar" style="padding: 15px;margin-top: 25px;"><button class="btn btn-primary text-center border rounded-pill border-warning" id="post_delete_button-2" type="button" style="background-color: #f00000;width: 300px;margin-left: auto;font-family: 'Nature Spirit Rough';margin-top: 20px;margin-right: auto;font-size: 30px;">DELETE Event</button></div>
+                            <div class="row text-center d-xl-flex justify-content-xl-center" id="post_delete_bar" style="padding: 15px;margin-top: 25px;margin-bottom: 10vh;"><button class="btn btn-primary text-center border rounded-pill border-warning" id="post_delete_button-2" type="button" style="background-color: #f00000;width: 300px;font-family: 'Nature Spirit Rough';font-size: 30px;">DELETE Event</button></div><div class="container">
+	<h2 class="text-center">Comments Section</h2>
+	
+	<div class="card">
+	    <div class="card-body">
+	        <div class="row">
+        	    <div class="col-md-2">
+        	        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+        	        <p class="text-secondary text-center">15 Minutes Ago</p>
+        	    </div>
+        	    <div class="col-md-10">
+        	        <p>
+        	            <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman Akash</strong></a>
+        	            <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+        	            <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+        	            <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+
+        	       </p>
+        	       <div class="clearfix"></div>
+        	        <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        	        <p>
+        	            <a class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Reply</a>
+        	            <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+        	       </p>
+        	    </div>
+	        </div>
+	        	<div class="card card-inner">
+            	    <div class="card-body">
+            	        <div class="row">
+                    	    <div class="col-md-2">
+                    	        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                    	        <p class="text-secondary text-center">15 Minutes Ago</p>
+                    	    </div>
+                    	    <div class="col-md-10">
+                    	        <p><a href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman Akash</strong></a></p>
+                    	        <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    	        <p>
+                    	            <a class="float-right btn btn-outline-primary ml-2">  <i class="fa fa-reply"></i> Reply</a>
+                    	            <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+                    	       </p>
+                    	    </div>
+            	        </div>
+            	    </div>
+	            </div>
+	    </div>
+	</div>
+</div>
                         </div>
                     </div>
                 </div>
@@ -273,6 +321,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
+    <script src="assets/js/-Filterable-Cards-.js"></script>
     <script src="assets/js/DataTable---Fully-BSS-Editable.js"></script>
     <script src="assets/js/clean-blog.js"></script>
     <script src="assets/js/current-day.js"></script>

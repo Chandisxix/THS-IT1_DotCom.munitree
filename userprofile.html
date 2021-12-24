@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>DotCom.munitree</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/-Filterable-Cards-.css">
+    <link rel="stylesheet" href="assets/css/Article-Cards.css">
     <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
     <link rel="stylesheet" href="assets/css/Boostrap-Tabs.css">
     <link rel="stylesheet" href="assets/css/Button-Change-Text-on-Hover.css">
@@ -34,6 +36,7 @@
     <link rel="stylesheet" href="assets/css/Latest-Blog.css">
     <link rel="stylesheet" href="assets/css/Lightbox-Gallery.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/Masonry-gallery-cards-responsive-1.css">
     <link rel="stylesheet" href="assets/css/Masonry-gallery-cards-responsive.css">
     <link rel="stylesheet" href="assets/css/Minimal-tabs-1.css">
     <link rel="stylesheet" href="assets/css/Minimal-tabs.css">
@@ -64,7 +67,7 @@
                         <li class="nav-item"></li>
                         <li class="nav-item"><a class="nav-link" href="homepage.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="events.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Events</a></li>
-                        <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Discussion Space</a></li>
+                        <li class="nav-item"><a class="nav-link" href="discussionspace.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Discussion Space</a></li>
                         <li class="nav-item"><a class="nav-link" href="marketplace.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Marketplace</a></li>
                         <li class="nav-item"><a class="nav-link" href="feedbackreports.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">FeedBack and Reports</a></li>
                         <li class="nav-item" style="margin-left: 1vw;margin-right: 1vw;">
@@ -84,13 +87,13 @@
                         <div id="welcome" style="width: 100%;"></div>
                         <div class="row" id="userpic"><img class="d-none d-xl-flex" data-bss-hover-animate="tada" src="assets/img/Edit%20Profile.png" style="width: 18vw;margin-left: auto;margin-right: auto;height: 25vh;"></div>
                         <div class="row text-center" id="welcome_bar">
-                            <p data-bss-hover-animate="rubberBand" id="username" style="font-family: 'Nature Spirit Rough';font-weight: bold;font-size: 60px;color: rgb(0,209,255);margin-top: 0px;margin-bottom: 0px;height: 100%;letter-spacing: 2px;width: 100%;"><br><strong>Edit Profile</strong><br><br></p>
+                            <p data-bss-hover-animate="rubberBand" id="username" style="font-family: 'Nature Spirit Rough';font-weight: bold;font-size: 60px;color: rgb(0,209,255);margin-top: 0px;margin-bottom: 0px;height: 100%;letter-spacing: 2px;width: 100%;"><br><strong>My Profile</strong><br><br></p>
                         </div>
                         <div id="logged_in_bar1">
                             <p id="logged_in_msg1" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(255,255,255);font-size: 20px;line-height: 30px;">Welcome to your profile !<br></p>
                         </div>
                         <div id="logged_in_bar2">
-                            <p id="logged_in_msg2" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(230,230,230);font-size: 20px;line-height: 30px;">Here you can edit and change your profile picture, bio, and password!</p>
+                            <p id="logged_in_msg2" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(230,230,230);font-size: 20px;line-height: 30px;">Here you can view some stuff about you that others can see!</p>
                         </div>
                     </div>
                 </div>
@@ -164,62 +167,7 @@
                     </section>
                 </div>
             </div>
-            <div class="container profile profile-view" id="profile" style="background: #ffffff;width: 70vw;max-width: none;">
-                <div class="row">
-                    <div class="col-md-12 alert-col relative">
-                        <div class="alert alert-info alert-dismissible absolue center" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span>Profile save with success</span></div>
-                    </div>
-                </div>
-                <form>
-                    <div class="form-row profile-row">
-                        <div class="col-md-4 relative">
-                            <div class="avatar">
-                                <div class="avatar-bg center"></div>
-                            </div><input class="form-control-file form-control" type="file" name="avatar-file" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 5vh;">
-                        </div>
-                        <div class="col-md-8">
-                            <h1 style="font-family: 'Nature Spirit Rough';font-size: 50px;letter-spacing: 2px;font-weight: bold;">Edit Profile </h1>
-                            <hr>
-                            <div class="form-row">
-                                <div class="col-sm-12 col-md-6 col-xl-12">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">My Address:</label>
-                                        <p style="font-family: ABeeZee, sans-serif;font-size: 20px;color: #6c757d;">User's Address Will Be Displayed Here</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">First Name </label><input class="form-control" type="text" name="firstname" style="font-family: ABeeZee, sans-serif;border-radius: 10px;"></div>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Last Name </label><input class="form-control" type="text" name="lastname" style="font-family: ABeeZee, sans-serif;border-radius: 10px;"></div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">E-Mail Address</label><input class="form-control" type="email" style="border-radius: 10px;font-family: ABeeZee, sans-serif;"></div>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Contact Number</label><input class="form-control" type="tel" style="border-radius: 10px;font-family: ABeeZee, sans-serif;"></div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-sm-12 col-md-6 col-xl-12" style="width: 100%;">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">About Me</label><textarea class="form-control" style="font-family: ABeeZee, sans-serif;height: auto;border-radius: 10px;"></textarea></div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-sm-12 col-md-6 col-xl-12">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Enter current password to save changes</label><input class="form-control" type="password" style="width: 100%;border-radius: 10px;font-family: ABeeZee, sans-serif;" name="edit_passconfirm"></div>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="form-row">
-                                <div class="col-md-12 content-right"><button class="btn btn-success border rounded-pill form-btn" type="submit" style="font-family: ABeeZee, sans-serif;background: var(--green);">SAVE </button><button class="btn btn-danger border rounded-pill form-btn" type="reset" style="font-family: ABeeZee, sans-serif;">CANCEL </button><button class="btn btn-link border rounded-pill border-white form-btn" type="button" style="font-family: ABeeZee, sans-serif;width: auto;max-width: none;" data-target="#editprofile_modal_changepass" data-toggle="modal">Change Password</button></div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+            <div class="container profile profile-view" id="profile" style="background: #ffffff;width: 70vw;max-width: none;padding-top: 10vh;">
                 <div class="modal fade" role="dialog" tabindex="-1" id="editprofile_modal_changepass">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
@@ -245,6 +193,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="row d-xl-flex justify-content-xl-center" style="margin-bottom: 5vh;"><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="max-width: 15vw;"></div>
+                <div class="row">
+                    <h1 class="d-xl-flex justify-content-xl-center" style="font-family: 'Nature Spirit Rough';font-size: 60px;font-weight: bold;letter-spacing: 3px;">Last Name</h1>
+                </div>
+                <div class="row">
+                    <h1 class="d-xl-flex justify-content-xl-center" style="font-family: 'Nature Spirit Rough';font-size: 60px;letter-spacing: 2px;">First Name</h1>
+                </div>
+                <div class="row" style="margin-top: 2vh;">
+                    <h1 class="d-xl-flex justify-content-xl-center" style="font-family: ABeeZee, sans-serif;font-size: 25px;color: #6c757d;">E-Mail Address</h1>
+                </div>
+                <div class="row">
+                    <h1 class="d-xl-flex justify-content-xl-center" style="font-family: ABeeZee, sans-serif;font-size: 25px;color: #6c757d;">Contact Number</h1>
+                </div>
+                <div class="row">
+                    <h1 class="d-xl-flex justify-content-xl-center" style="font-family: ABeeZee, sans-serif;font-size: 25px;color: #6c757d;">Address</h1>
+                </div>
+                <div class="row d-xl-flex justify-content-xl-center" style="margin-top: 4vh;margin-bottom: 5vh;">
+                    <h1 style="text-align: center;font-family: ABeeZee, sans-serif;font-size: 35px;font-weight: bold;">About Me</h1>
+                    <p style="text-align: center;font-family: 'Open Sans', sans-serif;font-size: 25px;margin-top: 1vh;">Sample About Me Stuff</p>
+                </div>
+                <div class="row d-xl-flex justify-content-xl-center" style="margin-top: 4vh;margin-bottom: 10vh;">
+                    <h1 style="text-align: center;font-family: 'Nature Spirit Rough';font-size: 60px;font-weight: bold;letter-spacing: 3px;">Hope we can be friends! :)</h1>
+                </div>
             </div>
         </div>
     </section>
@@ -261,6 +232,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
+    <script src="assets/js/-Filterable-Cards-.js"></script>
     <script src="assets/js/DataTable---Fully-BSS-Editable.js"></script>
     <script src="assets/js/clean-blog.js"></script>
     <script src="assets/js/current-day.js"></script>
