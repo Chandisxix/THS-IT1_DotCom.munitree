@@ -67,7 +67,7 @@
                         <li class="nav-item"></li>
                         <li class="nav-item"><a class="nav-link" href="homepage.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Events</a></li>
-                        <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Discussion Space</a></li>
+                        <li class="nav-item"><a class="nav-link" href="discussionspace.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Discussion Space</a></li>
                         <li class="nav-item"><a class="nav-link" href="submission.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">Marketplace</a></li>
                         <li class="nav-item"><a class="nav-link" href="feedbackreports.html" style="font-family: 'Nature Spirit';letter-spacing: 3px;font-size: 2.5vh;">FeedBack and Reports</a></li>
                         <li class="nav-item"></li>
@@ -196,31 +196,58 @@
                         </div>
                     </div>
                 </div>
+                <!-- <div class="container" style="background: #ffffff;padding-top: 8vh;padding-bottom: 8vh;width: 70vw;max-width: none;">
+                    <div class="photo-card" style="max-width: 50vw;">
+                        <div class="photo-background" style="background-image:url(&quot;assets/img/product-aeon-feature.jpg&quot;);"></div>
+                        <div class="photo-details" style="padding-bottom: 2vh;">
+                            <h1 style="font-family: Cabin, sans-serif;">Welcome to System</h1>
+                            <div class="row">
+                                <div class="col-auto" style="width: auto;"><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 2vw;"></div>
+                                <div class="col d-xl-flex justify-content-xl-start align-items-xl-center">
+                                    <h1 style="font-size: 15px;font-family: Cabin, sans-serif;margin-bottom: 0px;">Admin</h1>
+                                </div>
+                            </div>
+                            <h1 style="font-size: 15px;font-family: Cabin, sans-serif;margin-top: 5.25px;color: #8d97ad;">Time</h1>
+                            <p id="announcement_previewcontent" style="font-family: ABeeZee, sans-serif;">Lorem ipsum</p>
+                            <div class="photo-tags">
+                                <ul>
+                                    <li><a href="#" style="font-family: ABeeZee, sans-serif;">Tag 1</a></li>
+                                    <li><a href="#" style="font-family: ABeeZee, sans-serif;">tag 2</a></li>
+                                </ul>
+                                <ul class="float-right" style="margin-top: 3vh;">
+                                    <li><a class="text-capitalize" href="viewpost.html" style="font-family: ABeeZee, sans-serif;width: 100%;height: 100%;">View more</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
                 <?php
-                    $query2 = "SELECT * FROM announcement";
+                    $query2 = "SELECT * FROM announcement ORDER BY uNum DESC";
                     $result2 = mysqli_query($DBConnect, $query2);
                     while ($row = mysqli_fetch_array($result2, MYSQLI_ASSOC)) {
                         $author = $row['uemail'];
+                        $time = $row['utime'];
                         $callannouncement = $row['uannouncement'];
+                        $calltitle = $row['utitle'];
                 ?>
                 <div class="container" style="background: #ffffff;padding-top: 8vh;padding-bottom: 8vh;width: 70vw;max-width: none;">
                     <div class="photo-card" style="max-width: 50vw;">
                         <div class="photo-background" style="background-image:url(&quot;assets/img/product-aeon-feature.jpg&quot;);"></div>
                         <div class="photo-details" style="padding-bottom: 2vh;">
-                            <h1 style="font-family: Cabin, sans-serif;">Announcement Title</h1>
+                            <h1 style="font-family: Cabin, sans-serif;"><?php echo $calltitle; ?></h1>
                             <div class="row">
                                 <div class="col-auto" style="width: auto;"><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 2vw;"></div>
                                 <div class="col d-xl-flex justify-content-xl-start align-items-xl-center">
                                     <h1 style="font-size: 15px;font-family: Cabin, sans-serif;margin-bottom: 0px;"><?php echo $author; ?></h1>
                                 </div>
                             </div>
-                            <h1 style="font-size: 15px;font-family: Cabin, sans-serif;margin-top: 5.25px;color: #8d97ad;">Date and Time posted</h1>
+                            <h1 style="font-size: 15px;font-family: Cabin, sans-serif;margin-top: 5.25px;color: #8d97ad;"><?php echo $time; ?></h1>
                             <p id="announcement_previewcontent" style="font-family: ABeeZee, sans-serif;"><?php echo $callannouncement; ?></p>
                             <div class="photo-tags">
-                                <ul>
+                                <!-- <ul>
                                     <li><a href="#" style="font-family: ABeeZee, sans-serif;">Tag 1</a></li>
                                     <li><a href="#" style="font-family: ABeeZee, sans-serif;">tag 2</a></li>
-                                </ul>
+                                </ul> -->
                                 <ul class="float-right" style="margin-top: 3vh;">
                                     <li><a class="text-capitalize" href="viewpost.html" style="font-family: ABeeZee, sans-serif;width: 100%;height: 100%;">View more</a></li>
                                 </ul>
@@ -244,7 +271,8 @@
                                     <input class="d-xl-flex justify-content-xl-center form-control" type="file" name="avatar-file" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 5vh;" multiple="">
                                 </div>
                                 <!-- <h1 style="font-family: ABeeZee, sans-serif;font-size: 25px;">Announcement Message:</h1><textarea style="width: 100%;height: auto;border-radius: 10px;border-color: var(--gray);font-family: 'Open Sans', sans-serif;padding-right: 10px;padding-left: 10px;padding-top: 10px;padding-bottom: 10px;margin-top: 0vh;"></textarea> -->
-                                <input class="d-xl-flex justify-content-xl-center form-control" type="text" name="textannouncement" placeholder="Message" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 5vh;">
+                                <input class="d-xl-flex justify-content-xl-center form-control" type="text" name="texttitle" placeholder="Enter Title" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 5vh;">
+                                <input class="d-xl-flex justify-content-xl-center form-control" type="text" name="textannouncement" placeholder="Enter Message" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 5vh;">
                             </div>
                             <div class="modal-footer"><button class="btn btn-light border rounded-pill" type="button" data-dismiss="modal">Close</button>
                             <button class="btn btn-success border rounded-pill" type="submit" name="addannouncement" >Add announcement</button></div>
@@ -270,9 +298,10 @@
 
     if(isset ($_POST["addannouncement"])){
         $announcement = $_POST["textannouncement"];
+        $title = $_POST["texttitle"];
         $creator = $_SESSION['uemail'];
-        $add = "INSERT INTO announcement (uannouncement, uemail) VALUES 
-            ('$announcement', '$creator')";
+        $add = "INSERT INTO announcement (uannouncement, uemail, utime, utitle) VALUES 
+            ('$announcement', '$creator', now(), '$title')";
             mysqli_query($DBConnect, $add) or die (mysqli_error($DBConnect));
             echo "<script type='text/javascript'> document.location = 'admin_homepage.php'; </script>";
             exit();

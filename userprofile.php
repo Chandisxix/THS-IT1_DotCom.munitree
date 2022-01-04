@@ -109,7 +109,7 @@
                         <div class="alert alert-info alert-dismissible absolue center" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span>Profile save with success</span></div>
                     </div>
                 </div>
-                <form>
+                <form method="POST">
                     <div class="form-row profile-row">
                         <div class="col-md-4 relative">
                             <div class="avatar">
@@ -128,18 +128,18 @@
                             </div>
                             <div class="form-row">
                                 <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">First Name </label><input class="form-control" type="text" name="firstname" value="<?php echo $tempofname; ?>" style="font-family: ABeeZee, sans-serif;border-radius: 10px;"></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">First Name </label><input class="form-control" type="text" name="firstname" value="<?php echo $tempofname; ?>" style="font-family: ABeeZee, sans-serif;border-radius: 10px;" readonly></div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Last Name </label><input class="form-control" type="text" name="lastname" value="<?php echo $tempolname; ?>"style="font-family: ABeeZee, sans-serif;border-radius: 10px;"></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Last Name </label><input class="form-control" type="text" name="lastname" value="<?php echo $tempolname; ?>"style="font-family: ABeeZee, sans-serif;border-radius: 10px;" readonly></div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">E-Mail Address</label><input class="form-control" type="email" value="<?php echo $tempoemail; ?>"style="border-radius: 10px;font-family: ABeeZee, sans-serif;"></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">E-Mail Address</label><input class="form-control" type="email" name="email" value="<?php echo $tempoemail; ?>"style="border-radius: 10px;font-family: ABeeZee, sans-serif;"></div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
-                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Contact Number</label><input class="form-control" type="tel" value="<?php echo $tempocontact; ?>"style="border-radius: 10px;font-family: ABeeZee, sans-serif;"></div>
+                                    <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Contact Number</label><input class="form-control" type="tel" name="contact" value="<?php echo $tempocontact; ?>"style="border-radius: 10px;font-family: ABeeZee, sans-serif;"></div>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -147,14 +147,16 @@
                                     <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">About Me</label><textarea class="form-control" style="font-family: ABeeZee, sans-serif;height: auto;border-radius: 10px;"></textarea></div>
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <!-- <div class="form-row">
                                 <div class="col-sm-12 col-md-6 col-xl-12">
                                     <div class="form-group"><label style="font-family: ABeeZee, sans-serif;font-weight: bold;">Enter current password to save changes</label><input class="form-control" type="password" style="width: 100%;border-radius: 10px;font-family: ABeeZee, sans-serif;" name="edit_passconfirm"></div>
                                 </div>
-                            </div>
+                            </div> -->
                             <hr>
                             <div class="form-row">
-                                <div class="col-md-12 content-right"><button class="btn btn-success border rounded-pill form-btn" type="submit" style="font-family: ABeeZee, sans-serif;background: var(--green);">SAVE </button><button class="btn btn-danger border rounded-pill form-btn" type="reset" style="font-family: ABeeZee, sans-serif;">CANCEL </button><button class="btn btn-link border rounded-pill border-white form-btn" type="button" style="font-family: ABeeZee, sans-serif;width: auto;max-width: none;" data-target="#editprofile_modal_changepass" data-toggle="modal">Change Password</button></div>
+                                <div class="col-md-12 content-right">
+                                    <button class="btn btn-success border rounded-pill form-btn" type="submit" name="submitedit" style="font-family: ABeeZee, sans-serif;background: var(--green);">SAVE </button>
+                                    <button class="btn btn-danger border rounded-pill form-btn" type="reset" style="font-family: ABeeZee, sans-serif;">CANCEL </button><button class="btn btn-link border rounded-pill border-white form-btn" type="button" style="font-family: ABeeZee, sans-serif;width: auto;max-width: none;" data-target="#editprofile_modal_changepass" data-toggle="modal">Change Password</button></div>
                             </div>
                         </div>
                     </div>
@@ -196,3 +198,21 @@
 </body>
 
 </html>
+
+<?php 
+    if(isset($_POST["submitedit"])){
+        $userlogged = $_SESSION['uemail'];
+        $userfname = $_POST["firstname"];
+        $userlname = $_POST["lastname"];
+        $useremail = $_POST["email"];
+        $usercontact = $_POST["contact"];
+        $query = "UPDATE users SET ufname='$userfname', ulname='$userlname', 
+        uemail='$useremail', ucontactnumber='$usercontact' WHERE uemail='$userlogged'";
+        $query2 = mysqli_query($DBConnect, $query);
+
+        if($query2){
+            echo "<script type='text/javascript'> document.location = 'userprofile.php'; </script>";
+        }
+    }
+
+?>
