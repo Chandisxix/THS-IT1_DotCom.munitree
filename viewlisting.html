@@ -79,21 +79,21 @@
                 </div>
             </div>
         </nav>
-        <header class="text-center masthead" id="header" style="height: 60vh;background: url(&quot;assets/img/Banner_Profile.jpg&quot;) center / cover no-repeat;margin-bottom: 2px;">
+        <header class="text-center masthead" id="header" style="height: 60vh;background: url(&quot;assets/img/Banner_Marketplace.jpg&quot;) center / cover no-repeat;margin-bottom: 2px;">
             <div class="container">
                 <div class="overlay" style="height: 100%;"></div>
                 <div class="row" style="padding-top: 120px;">
                     <div class="col-lg-8 text-center m-auto">
                         <div id="welcome" style="width: 100%;"></div>
-                        <div class="row" id="userpic"><img class="d-none d-xl-flex" data-bss-hover-animate="tada" src="assets/img/Edit%20Profile.png" style="width: 18vw;margin-left: auto;margin-right: auto;height: 25vh;"></div>
+                        <div class="row" id="userpic"><img class="d-none d-xl-flex" data-bss-hover-animate="tada" src="assets/img/Marketplace.png" style="width: 18vw;margin-left: auto;margin-right: auto;height: 25vh;"></div>
                         <div class="row text-center" id="welcome_bar">
-                            <p data-bss-hover-animate="rubberBand" id="username" style="font-family: 'Nature Spirit Rough';font-weight: bold;font-size: 60px;color: rgb(0,209,255);margin-top: 0px;margin-bottom: 0px;height: 100%;letter-spacing: 2px;width: 100%;"><br><strong>My Profile</strong><br><br></p>
+                            <p data-bss-hover-animate="rubberBand" id="username" style="font-family: 'Nature Spirit Rough';font-weight: bold;font-size: 60px;color: var(--green);margin-top: 0px;margin-bottom: 0px;height: 100%;letter-spacing: 2px;width: 100%;"><br><strong>Marketplace: View Listing</strong><br><br></p>
                         </div>
                         <div id="logged_in_bar1">
-                            <p id="logged_in_msg1" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(255,255,255);font-size: 20px;line-height: 30px;">Welcome to your profile !<br></p>
+                            <p id="logged_in_msg1" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(255,255,255);font-size: 20px;line-height: 30px;">Change<br></p>
                         </div>
                         <div id="logged_in_bar2">
-                            <p id="logged_in_msg2" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(230,230,230);font-size: 20px;line-height: 30px;">Here you can view some stuff about you that others can see!</p>
+                            <p id="logged_in_msg2" class="intro-text" style="font-family: ABeeZee, sans-serif;color: rgb(230,230,230);font-size: 20px;line-height: 30px;">Change</p>
                         </div>
                     </div>
                 </div>
@@ -167,7 +167,159 @@
                     </section>
                 </div>
             </div>
-            <div class="container profile profile-view" id="profile" style="background: #ffffff;width: 70vw;max-width: none;padding-top: 10vh;">
+            <div class="container profile profile-view" id="profile" style="background: #ffffff;width: 70vw;max-width: none;">
+                <div class="row">
+                    <div class="col-md-12 alert-col relative">
+                        <div class="alert alert-info alert-dismissible absolue center" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span>Profile save with success</span></div>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-row profile-row">
+                        <div class="col-md-4 relative">
+                            <div style="height: 300px;max-width: 430px;width: 430px;max-height: 300px;padding: 6px;"><img style="width: 100%;height: 100%;border-radius: 0px;" src="assets/img/product-aeon-feature.jpg"></div>
+                            <section class="photo-gallery" style="height: auto;">
+                                <div class="container">
+                                    <p style="font-family: ABeeZee, sans-serif;font-size: 20px;color: #6c757d;">Photos:</p>
+                                    <div class="form-row photos">
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg"><img class="img-fluid" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/campfire.gif"><img class="img-fluid" src="assets/img/campfire.gif" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Login.jpg"><img class="img-fluid" src="assets/img/Login.jpg" style="height: 90px;width: 90px;max-width: 90px;max-height: 90px;"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/housetemp1.png"><img class="img-fluid" src="assets/img/housetemp1.png" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Banner_Profile.jpg"><img class="img-fluid" src="assets/img/Banner_Profile.jpg" style="width: 90px;height: 90px;max-width: 90px;max-height: 90px;"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a data-lightbox="photos" href="assets/img/Landing.png"><img class="img-fluid" id="testpic" src="assets/img/Landing.png" style="width: 90px;max-width: 90px;height: 90px;max-height: 90px;"></a></div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-md-8">
+                            <h1 style="font-family: ABeeZee, sans-serif;font-size: 50px;font-weight: bold;">Name of Listing</h1>
+                            <p style="font-family: ABeeZee, sans-serif;font-size: 20px;color: #6c757d;">Product/Service</p>
+                            <div class="form-row" style="margin-bottom: 1vh;">
+                                <div class="col-auto d-xl-flex align-items-xl-center" style="width: auto;">
+                                    <h1 class="d-xl-flex align-items-xl-center" style="font-weight: bold;font-size: 20px;font-family: ABeeZee, sans-serif;width: auto;color: #757575;height: 100%;">Leave a Rating:</h1>
+                                </div>
+                                <div class="col"><a href="#"><span class="fa fa-star checked"></span></a><a href="#"><span class="fa fa-star checked"></span></a><a href="#"><span class="fa fa-star checked"></span></a><a href="#"><span class="fa fa-star checked"></span></a><a href="#"><span class="fa fa-star"></span></a></div>
+                            </div><a href="userprofile.html">
+                                <h1 class="d-xl-flex align-items-xl-center" style="font-family: ABeeZee, sans-serif;font-size: 20px;height: auto;"><img class="border rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 2.5vw;margin-right: 1vw;">Username</h1>
+                            </a>
+                            <hr>
+                            <div class="form-row d-xl-flex align-items-xl-center" style="margin-top: 10px;margin-bottom: 3vh;background: #f2f2f2;height: 70px;padding-left: 5px;padding-top: 10px;">
+                                <div class="col-auto">
+                                    <h1 style="font-weight: bold;font-family: Cabin, sans-serif;">Php</h1>
+                                </div>
+                                <div class="col">
+                                    <h1 id="viewlisting_price_value" style="font-family: Cabin, sans-serif;font-weight: bold;color: var(--green);">0.00</h1>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 d-xl-flex justify-content-xl-start content-right"><button class="btn btn-success border rounded-pill d-xl-flex form-btn" type="submit" style="font-family: ABeeZee, sans-serif;background: rgb(12,52,78);width: auto;max-width: none;margin-left: 1vw;">Purchase via<img src="assets/img/PayMaya_Logo_Alt.png" style="width: 5vw;margin-left: 10px;"></button></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 d-xl-flex justify-content-xl-start content-right" style="margin-top: 1vh;"><button class="btn btn-danger border rounded-pill form-btn" type="reset" style="font-family: ABeeZee, sans-serif;background: var(--green);width: auto;max-width: none;margin-left: 1vw;">Chat With Lister</button>
+                                    <h1 class="d-xl-flex align-items-xl-center" style="font-size: 18px;height: 100%;color: #919693;margin-left: 1vw;">(For Inquiries or other payment methods)</h1>
+                                </div>
+                            </div>
+                            <div class="form-row" style="margin-top: 5vh;">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <h1 style="font-weight: bold;font-size: 23px;font-family: ABeeZee, sans-serif;width: auto;color: #000000;">Description</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <p style="margin-top: 0px;margin-bottom: 0px;font-family: 'Open Sans', sans-serif;font-size: 20px;height: auto;line-height: 25px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <hr>
+                                </div>
+                                <div class="user-body" style="width: 100%;max-width: none;font-family: ABeeZee, sans-serif;"><span class="heading">User Ratings</span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span>
+                                    <p>4.1 average based on 254 reviews.</p>
+                                    <hr style="border:3px solid #f1f1f1">
+                                    <div class="rg-row">
+                                        <div class="side">
+                                            <div>
+                                                <p>5 star</p>
+                                            </div>
+                                        </div>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div class="bar-5"></div>
+                                            </div>
+                                        </div>
+                                        <div class="side right">
+                                            <div>
+                                                <p>150</p>
+                                            </div>
+                                        </div>
+                                        <div class="side">
+                                            <div>
+                                                <p>4 star</p>
+                                            </div>
+                                        </div>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div class="bar-4"></div>
+                                            </div>
+                                        </div>
+                                        <div class="side right">
+                                            <div>
+                                                <p>63</p>
+                                            </div>
+                                        </div>
+                                        <div class="side">
+                                            <div>
+                                                <p>3 star</p>
+                                            </div>
+                                        </div>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div class="bar-3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="side right">
+                                            <div>
+                                                <p>15</p>
+                                            </div>
+                                        </div>
+                                        <div class="side">
+                                            <div>
+                                                <p>2 star</p>
+                                            </div>
+                                        </div>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div class="bar-2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="side right">
+                                            <div>
+                                                <p>6</p>
+                                            </div>
+                                        </div>
+                                        <div class="side">
+                                            <div>
+                                                <p>1 star</p>
+                                            </div>
+                                        </div>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div class="bar-1"></div>
+                                            </div>
+                                        </div>
+                                        <div class="side right">
+                                            <div>
+                                                <p>20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
                 <div class="modal fade" role="dialog" tabindex="-1" id="editprofile_modal_changepass">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
@@ -192,29 +344,6 @@
                             <div class="modal-footer"><button class="btn btn-danger border rounded-pill" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-success border rounded-pill" type="submit">Save New Password</button></div>
                         </div>
                     </div>
-                </div>
-                <div class="row d-xl-flex justify-content-xl-center" style="margin-bottom: 5vh;"><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="max-width: 15vw;"></div>
-                <div class="row">
-                    <h1 class="d-xl-flex justify-content-xl-center" style="font-family: 'Nature Spirit Rough';font-size: 60px;font-weight: bold;letter-spacing: 3px;">Last Name</h1>
-                </div>
-                <div class="row">
-                    <h1 class="d-xl-flex justify-content-xl-center" style="font-family: 'Nature Spirit Rough';font-size: 60px;letter-spacing: 2px;">First Name</h1>
-                </div>
-                <div class="row" style="margin-top: 2vh;">
-                    <h1 class="d-xl-flex justify-content-xl-center" style="font-family: ABeeZee, sans-serif;font-size: 25px;color: #6c757d;">E-Mail Address</h1>
-                </div>
-                <div class="row">
-                    <h1 class="d-xl-flex justify-content-xl-center" style="font-family: ABeeZee, sans-serif;font-size: 25px;color: #6c757d;">Contact Number</h1>
-                </div>
-                <div class="row">
-                    <h1 class="d-xl-flex justify-content-xl-center" style="font-family: ABeeZee, sans-serif;font-size: 25px;color: #6c757d;">Address</h1>
-                </div>
-                <div class="row d-xl-flex justify-content-xl-center" style="margin-top: 4vh;margin-bottom: 5vh;">
-                    <h1 style="text-align: center;font-family: ABeeZee, sans-serif;font-size: 35px;font-weight: bold;">About Me</h1>
-                    <p style="text-align: center;font-family: 'Open Sans', sans-serif;font-size: 25px;margin-top: 1vh;">Sample About Me Stuff</p>
-                </div>
-                <div class="row d-xl-flex justify-content-xl-center" style="margin-top: 4vh;margin-bottom: 10vh;">
-                    <h1 style="text-align: center;font-family: 'Nature Spirit Rough';font-size: 60px;font-weight: bold;letter-spacing: 3px;">Hope we can be friends! :)</h1>
                 </div>
             </div>
         </div>
