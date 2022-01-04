@@ -1,6 +1,19 @@
 <?php
     session_start();
     require("connect.php");
+
+    $_SESSION['uemail'];
+    if($_SESSION['uemail']){
+        $query = mysqli_query($DBConnect, "SELECT * FROM announcement");
+        $fetch = mysqli_fetch_array($query);
+        $tempannouncement=$fetch["uannouncement"];
+        // $result_uv = $DBConnect->query($query);
+        // $tempofname=$fetch["ufname"];
+        // $tempolname=$fetch["ulname"];
+        // $tempoaddress=$fetch["uaddress"];
+        // $tempocontact=$fetch["ucontactnumber"];
+        // $tempofname=$fetch["ufname"];
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -183,6 +196,13 @@
                         </div>
                     </div>
                 </div>
+                <?php
+                    $query2 = "SELECT * FROM announcement";
+                    $result2 = mysqli_query($DBConnect, $query2);
+                    while ($row = mysqli_fetch_array($result2, MYSQLI_ASSOC)) {
+                        $author = $row['uemail'];
+                        $callannouncement = $row['uannouncement'];
+                ?>
                 <div class="container" style="background: #ffffff;padding-top: 8vh;padding-bottom: 8vh;width: 70vw;max-width: none;">
                     <div class="photo-card" style="max-width: 50vw;">
                         <div class="photo-background" style="background-image:url(&quot;assets/img/product-aeon-feature.jpg&quot;);"></div>
@@ -191,11 +211,11 @@
                             <div class="row">
                                 <div class="col-auto" style="width: auto;"><img class="rounded-circle" src="assets/img/Maximum%20Venom%20-%20Venomized%20Spider-Man.jpg" style="width: 2vw;"></div>
                                 <div class="col d-xl-flex justify-content-xl-start align-items-xl-center">
-                                    <h1 style="font-size: 15px;font-family: Cabin, sans-serif;margin-bottom: 0px;">Author</h1>
+                                    <h1 style="font-size: 15px;font-family: Cabin, sans-serif;margin-bottom: 0px;"><?php echo $author; ?></h1>
                                 </div>
                             </div>
                             <h1 style="font-size: 15px;font-family: Cabin, sans-serif;margin-top: 5.25px;color: #8d97ad;">Date and Time posted</h1>
-                            <p id="announcement_previewcontent" style="font-family: ABeeZee, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales elementum mi non hendrerit. Proin tempor facilisis felis nec ultrices. Duis nec ultrices neque. Proin semper ultricies turpis, vel faucibus velit sodales vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&nbsp; </p>
+                            <p id="announcement_previewcontent" style="font-family: ABeeZee, sans-serif;"><?php echo $callannouncement; ?></p>
                             <div class="photo-tags">
                                 <ul>
                                     <li><a href="#" style="font-family: ABeeZee, sans-serif;">Tag 1</a></li>
@@ -208,6 +228,8 @@
                         </div>
                     </div>
                 </div>
+                <?php } ?>
+                <form method="POST">
                 <div class="modal fade" role="dialog" tabindex="-1" id="announcement_modal_create" style="border-radius: 20px;">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
@@ -218,11 +240,15 @@
                                 <div class="col-md-4 col-xl-12 relative" style="width: 100%;margin-bottom: 5vh;">
                                     <div class="avatar" style="width: 100%;height: auto;">
                                         <div class="avatar-bg center" style="width: auto;margin-left: 0px;border-radius: 15px;min-height: 40vh;max-height: none;height: auto;"></div>
-                                    </div><input class="d-xl-flex justify-content-xl-center form-control" type="file" name="avatar-file" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 5vh;" multiple="">
+                                    </div>
+                                    <input class="d-xl-flex justify-content-xl-center form-control" type="file" name="avatar-file" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 5vh;" multiple="">
                                 </div>
-                                <h1 style="font-family: ABeeZee, sans-serif;font-size: 25px;">Announcement Message:</h1><textarea style="width: 100%;height: auto;border-radius: 10px;border-color: var(--gray);font-family: 'Open Sans', sans-serif;padding-right: 10px;padding-left: 10px;padding-top: 10px;padding-bottom: 10px;margin-top: 0vh;"></textarea>
+                                <!-- <h1 style="font-family: ABeeZee, sans-serif;font-size: 25px;">Announcement Message:</h1><textarea style="width: 100%;height: auto;border-radius: 10px;border-color: var(--gray);font-family: 'Open Sans', sans-serif;padding-right: 10px;padding-left: 10px;padding-top: 10px;padding-bottom: 10px;margin-top: 0vh;"></textarea> -->
+                                <input class="d-xl-flex justify-content-xl-center form-control" type="text" name="textannouncement" placeholder="Message" style="font-family: ABeeZee, sans-serif;border-style: none;margin-top: 5vh;">
                             </div>
-                            <div class="modal-footer"><button class="btn btn-light border rounded-pill" type="button" data-dismiss="modal">Close</button><button class="btn btn-success border rounded-pill" type="submit" style="border-color: var(--success);">Add announcement</button></div>
+                            <div class="modal-footer"><button class="btn btn-light border rounded-pill" type="button" data-dismiss="modal">Close</button>
+                            <button class="btn btn-success border rounded-pill" type="submit" name="addannouncement" >Add announcement</button></div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -238,3 +264,33 @@
 </body>
 
 </html>
+
+<?php
+    require("connect.php");
+
+    if(isset ($_POST["addannouncement"])){
+        $announcement = $_POST["textannouncement"];
+        $creator = $_SESSION['uemail'];
+        $add = "INSERT INTO announcement (uannouncement, uemail) VALUES 
+            ('$announcement', '$creator')";
+            mysqli_query($DBConnect, $add) or die (mysqli_error($DBConnect));
+            echo "<script type='text/javascript'> document.location = 'admin_homepage.php'; </script>";
+            exit();
+        // $lastname = $_POST["lastname"];
+        // $email = $_POST["email"];
+        // $pass = $_POST["password"];
+        // $rpass = $_POST['rpassword'];
+        // $pass = md5($pass);
+        
+        // if($pass != md5($rpass)){
+        //     echo "not same";
+        // }
+        // else{
+        //     $add = "INSERT INTO users (ufname, ulname, uemail, upassword) VALUES 
+        //     ('$firstname', '$lastname', '$email', '$pass')";
+        //     mysqli_query($DBConnect, $add) or die (mysqli_error($DBConnect));
+        //     echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
+        //     exit();
+        // }
+    }
+?>
